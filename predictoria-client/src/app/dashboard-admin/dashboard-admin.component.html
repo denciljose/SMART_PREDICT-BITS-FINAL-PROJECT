@@ -1,0 +1,38 @@
+<div fxFlexFill fxLayout="column" fxLayoutAlign="stretch">
+  <div fxFlex="auto">
+    <mat-toolbar color="primary">
+      <span>Predictoria</span>
+    </mat-toolbar>
+  </div>
+  <div fxFlex="auto" fxFlexFill>
+    <mat-tab-group fxFlexFill>
+      <mat-tab label="Games">
+        <div fxFlexFill fxLayout="column" fxLayoutAlign="stretch">
+          <app-add-result></app-add-result>
+        </div>
+      </mat-tab>
+      <mat-tab label="HVP">
+        <div fxFlexFill fxLayout="column" fxLayoutAlign="stretch">
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  New HVP
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <app-new-hvp></app-new-hvp>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Add HVP
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <app-add-hvp-result></app-add-hvp-result>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div fxFlexFill fxLayout="column" fxLayoutAlign="stretch">
+  <div fxFlex="auto">
+    <mat-toolbar color="primary">
+      <span>Predictoria</span>
+    </mat-toolbar>
+  </div>
+  <div fxFlex="auto" fxFlexFill fxLayout="column">
+    <div fxFlex="auto" fxFlex="30%">
+      <div fxFlex="80%">
+          <mat-card class="mg-20">
+              <mat-card-title>User ranking</mat-card-title>
+              <mat-card-content>
+                <div fxFlex="auto" fxFlexFill  fxLayout="column">
+                  <div class="mg-5" fxFlex="auto" fxFlexFill fxLayout="row">
+                    <div fxFlex>Rank</div>
+                    <div fxFlex>Username</div>
+                    <div fxFlex>Score</div>
+                    <div fxFlex>HvpScore</div>
+                  </div>
+                  <div class="mg-5" fxFlex="auto" fxFlexFill fxLayout="row">
+                    <div fxFlex>{{userInfo.rank}}</div>
+                    <div fxFlex>{{userInfo.username}}</div>
+                    <div fxFlex>{{userInfo.score}}</div>
+                    <div fxFlex>{{userInfo.hvpscore}}</div>
+                  </div>
+                </div>
+              </mat-card-content>
+          </mat-card>
+      </div>
+      <div fxFlex="auto">
+        <div class="mg-20" fxLayout="column" fxLayoutAlign="space-evenly start">
+            <button class="mg-5" (click)="goToPredict()" mat-raised-button>Predction History</button>
+            <button class="mg-5" (click)="goToPredict()" mat-raised-button>Make Prediction</button>
+            <button class="mg-5" mat-raised-button>HVP prediction history</button>
+            <button class="mg-5" mat-raised-button>Make High Value Prediction</button>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="auto" fxFlexFill>
+      <app-result [userId]="userId" fxFlex class="mg-20"></app-result>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+.fab-container {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+} 
+::ng-deep .mat-tab-body-wrapper {
+    height: 100%
+  }
